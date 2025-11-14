@@ -44,9 +44,9 @@ else
  */
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
 if (knightIsAwake == true || archerIsAwake == true || prisonerIsAwake == true)
-  {return true}
+  return true
 else
-  {return false}
+  return false
 }
 
 
@@ -60,9 +60,9 @@ else
  */
 export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
 if(archerIsAwake ==false && prisonerIsAwake ==true)
-  {return true}
+  return true
 else
-  {return false}
+  return false
 }
 
 /**
@@ -82,10 +82,10 @@ export function canFreePrisoner(
   petDogIsPresent,
 ) {
   if(petDogIsPresent == false && prisonerIsAwake == true && knightIsAwake == false && archerIsAwake == false)
-    {return true}
+    return true
   else if(petDogIsPresent == true && archerIsAwake == false)
-    {return true}
+    return true
   else
-  {return false}
+  return false
 
 }
