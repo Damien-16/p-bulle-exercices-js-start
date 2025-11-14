@@ -49,7 +49,7 @@ return word[0].toUpperCase() + word.toLowerCase().slice(1)
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  return line.trim()[line.trim().length-1]
+  return line.trim().slice(-1)
 }
 
 /**
