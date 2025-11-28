@@ -4,5 +4,5 @@
 //
 
 export const gigasecond = (dateDonnee) => {
-  return new Date(dateDonnee.getTime() + 1000000000000);
+  return new Date(dateDonnee.getTime() + 1e12);
 };
