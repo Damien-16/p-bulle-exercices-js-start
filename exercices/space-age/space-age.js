@@ -16,11 +16,11 @@ const planetOrbitalPeriods = {
 export const age = (planet, secondes) => {
     const orbitalPeriod = planetOrbitalPeriods[planet];
 
-    if (orbitalPeriod === undefined) {
+    if (!orbitalPeriod) {
         throw new Error("not a planet");
     }
-    const secondeAnnee = 31557600;  
-    const terreAnnee = secondes / secondeAnnee;
+    const SECONDEANNEE = 31557600;  
+    const terreAnnee = secondes / SECONDEANNEE;
     const ageSurPlanet = terreAnnee / orbitalPeriod;
     return Math.round(ageSurPlanet * 100) / 100;
 };
