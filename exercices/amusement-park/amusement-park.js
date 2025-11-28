@@ -10,8 +10,8 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-const visitor = {name, age, ticketId}; 
- return {name,age,ticketId}
+  const visitor = { name, age, ticketId };
+  return visitor
 }
 
 /**
@@ -21,7 +21,7 @@ const visitor = {name, age, ticketId};
  * @returns {Visitor} the visitor without a ticket
  */
 export function revokeTicket(visitor) {
-visitor.ticketId = null;
+  visitor.ticketId = null;
   return visitor;
 }
 
@@ -33,10 +33,10 @@ visitor.ticketId = null;
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-if (tickets[ticketId] === undefined)
-    return "unknown ticket id";
-if (tickets[ticketId] === null)
-    return "not sold";
+  if (tickets[ticketId] === undefined)
+    {return "unknown ticket id";}
+  if (tickets[ticketId] === null)
+    {return "not sold";}
   return "sold to " + tickets[ticketId];
 }
 
@@ -49,8 +49,8 @@ if (tickets[ticketId] === null)
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-if (tickets[ticketId] === undefined || tickets[ticketId] == null)
-    return "invalid ticket !!!";
+  if (tickets[ticketId] === undefined || tickets[ticketId] == null)
+    {return "invalid ticket !!!";}
   return tickets[ticketId];
 }
 
@@ -61,5 +61,5 @@ if (tickets[ticketId] === undefined || tickets[ticketId] == null)
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-return visitor.gtc?.version
+  return visitor.gtc?.version
 }
