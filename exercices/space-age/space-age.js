@@ -3,25 +3,24 @@
 // convenience to get you started writing code faster.
 //
 const planetOrbitalPeriods = {
-    "mercury": 0.2408467,
-    "venus": 0.61519726,
-    "earth": 1.0,
-    "mars": 1.8808158,
-    "jupiter": 11.862615,
-    "saturn": 29.447498,
-    "uranus": 84.016846,
-    "neptune": 164.79132
+  mercury: 0.2408467,
+  venus: 0.61519726,
+  earth: 1.0,
+  mars: 1.8808158,
+  jupiter: 11.862615,
+  saturn: 29.447498,
+  uranus: 84.016846,
+  neptune: 164.79132,
 };
 
 export const age = (planet, secondes) => {
-    const orbitalPeriod = planetOrbitalPeriods[planet];
+  const orbitalPeriod = planetOrbitalPeriods[planet];
 
-    if (!orbitalPeriod) {
-        throw new Error("not a planet");
-    }
-    const SECONDEANNEE = 31557600;  
-    const terreAnnee = secondes / SECONDEANNEE;
-    const ageSurPlanet = terreAnnee / orbitalPeriod;
-    return Math.round(ageSurPlanet * 100) / 100;
+  if (!orbitalPeriod) {
+    throw new Error("not a planet");
+  }
+  const SECONDEANNEE = 31557600;
+  const terreAnnee = secondes / SECONDEANNEE;
+  const ageSurPlanet = terreAnnee / orbitalPeriod;
+  return Math.round(ageSurPlanet * 100) / 100;
 };
-
